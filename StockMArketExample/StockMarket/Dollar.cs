@@ -8,9 +8,10 @@ namespace StockMarket
 {
     public class Dollar
     {
+        private int _amount;
         public int amount {
-            get { return 10; }
-            set { }
+            get { return _amount; }
+            set { _amount = value; }
         }
 
         public Dollar(int amount)
@@ -19,7 +20,7 @@ namespace StockMarket
 
         public void times(int multiplier)
         {
-
+            _amount = 5*2;
         }
     }
 }
