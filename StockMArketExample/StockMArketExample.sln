@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMArketExample", "StockMArketExample\StockMArketExample.csproj", "{C3BD2657-F9B1-47B8-9647-40E23A5DB089}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketExample", "StockMArketExample\StockMarketExample.csproj", "{C3BD2657-F9B1-47B8-9647-40E23A5DB089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket", "StockMarket\StockMarket.csproj", "{557C8CDC-D2B0-478C-A433-02C0A6D8D2D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C3BD2657-F9B1-47B8-9647-40E23A5DB089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3BD2657-F9B1-47B8-9647-40E23A5DB089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3BD2657-F9B1-47B8-9647-40E23A5DB089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557C8CDC-D2B0-478C-A433-02C0A6D8D2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557C8CDC-D2B0-478C-A433-02C0A6D8D2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557C8CDC-D2B0-478C-A433-02C0A6D8D2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557C8CDC-D2B0-478C-A433-02C0A6D8D2D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
