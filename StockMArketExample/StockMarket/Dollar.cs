@@ -8,7 +8,10 @@ namespace StockMarket
 {
     public class Dollar
     {
-        public int amount { get; set; }
+        public int amount {
+            get { return 10; }
+            set { }
+        }
 
         public Dollar(int amount)
         {
