@@ -20,5 +20,11 @@ namespace StockMArketExample
             product = five.times(3);
             Assert.AreEqual(15, product.amount);
         }
+
+        [Test]
+        public void testEquality()
+        {
+            Assert.IsTrue(new Dollar(5).equals(new Dollar(5)));
+        }
     }
 }
