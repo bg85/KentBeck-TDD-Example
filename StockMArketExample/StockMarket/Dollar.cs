@@ -26,7 +26,8 @@ namespace StockMarket
 
         public bool equals(Object objectToCompare)
         {
-            return true;
+            Dollar dollar = (Dollar) objectToCompare;
+            return amount == dollar.amount;
         }
     }
 }
