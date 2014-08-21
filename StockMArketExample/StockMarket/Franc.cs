@@ -8,8 +8,6 @@ namespace StockMarket
 {
     public class Franc : Money
     {
-        private int _amount;
-
         public Franc(int amount)
         {
             _amount = amount;
@@ -18,12 +16,6 @@ namespace StockMarket
         public Franc times(int multiplier)
         {
             return new Franc(_amount * multiplier);
-        }
-
-        public override bool Equals(object obj)
-        {
-            Franc franc = (Franc)obj;
-            return _amount == franc._amount;
         }
     }
 }
