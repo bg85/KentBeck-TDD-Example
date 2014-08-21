@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace StockMarket
 {
-    public class Money
-    {
+    public abstract class Money {
+
         protected int _amount;
+
+        public abstract Money times(int multiplier);
 
         public override bool Equals(object obj)
         {
@@ -16,7 +18,7 @@ namespace StockMarket
             return _amount == money._amount && this.GetType() == obj.GetType();
         }
 
-        public static Dollar dollar(int amount)
+        public static Money dollar(int amount)
         {
             return new Dollar(amount);
         }    }

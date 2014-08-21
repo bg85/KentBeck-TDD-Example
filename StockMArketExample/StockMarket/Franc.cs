@@ -13,7 +13,7 @@ namespace StockMarket
             _amount = amount;
         }
 
-        public Money times(int multiplier)
+        public override Money times(int multiplier)
         {
             return new Franc(_amount * multiplier);
         }
