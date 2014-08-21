@@ -25,6 +25,7 @@ namespace StockMArketExample
         public void testEquality()
         {
             Assert.IsTrue(new Dollar(5).equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).equals(new Dollar(6)));
         }
     }
 }
