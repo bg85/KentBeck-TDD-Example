@@ -19,9 +19,10 @@ namespace StockMarket
             _amount = amount;
         }
 
-        public void times(int multiplier)
+        public Dollar times(int multiplier)
         {
             _amount *= multiplier;
+            return null;
         }
     }
 }
