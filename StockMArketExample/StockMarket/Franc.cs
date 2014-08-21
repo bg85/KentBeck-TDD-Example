@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace StockMarket
 {
-    public class Dollar
+    public class Franc
     {
         private int _amount;
 
-        public Dollar(int amount)
+        public Franc(int amount)
         {
             _amount = amount;
         }
 
-        public Dollar times(int multiplier)
+        public Franc times(int multiplier)
         {
-            return new Dollar(_amount * multiplier);
+            return new Franc(_amount * multiplier);
         }
 
         public override bool Equals(object obj)
         {
-            Dollar dollar = (Dollar)obj;
-            return _amount == dollar._amount;
+            Franc franc = (Franc)obj;
+            return _amount == franc._amount;
         }
     }
 }
