@@ -12,8 +12,8 @@ namespace StockMarket
 
         public override bool Equals(object obj)
         {
-            var money = (Money)obj;
-            return _amount == money._amount;
+            var money = (Money) obj;
+            return _amount == money._amount && this.GetType() == obj.GetType();
         }
     }
 }
