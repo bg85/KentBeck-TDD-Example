@@ -24,9 +24,9 @@ namespace StockMarket
             return new Dollar(amount * multiplier);
         }
 
-        public bool equals(Object objectToCompare)
+        public override bool Equals(object obj)
         {
-            Dollar dollar = (Dollar) objectToCompare;
+            Dollar dollar = (Dollar)obj;
             return amount == dollar.amount;
         }
     }
