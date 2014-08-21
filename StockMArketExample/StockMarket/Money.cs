@@ -15,5 +15,9 @@ namespace StockMarket
             var money = (Money) obj;
             return _amount == money._amount && this.GetType() == obj.GetType();
         }
-    }
+
+        public static Dollar dollar(int amount)
+        {
+            return new Dollar(amount);
+        }    }
 }

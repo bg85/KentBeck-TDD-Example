@@ -14,7 +14,7 @@ namespace StockMArketExample
         [Test]
         public void testMultiplication()
         {
-            Dollar five = new Dollar(5);
+            Dollar five = Money.dollar(5);
             Assert.AreEqual(new Dollar(10), five.times(2));
             Assert.AreEqual(new Dollar(15), five.times(3));
         }
