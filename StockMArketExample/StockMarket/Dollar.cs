@@ -16,11 +16,12 @@ namespace StockMarket
 
         public Dollar(int amount)
         {
+            _amount = amount;
         }
 
         public void times(int multiplier)
         {
-            _amount = 5*2;
+            _amount *= multiplier;
         }
     }
 }
