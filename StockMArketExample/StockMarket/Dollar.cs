@@ -13,7 +13,7 @@ namespace StockMarket
             _amount = amount;
         }
 
-        public Dollar times(int multiplier)
+        public Money times(int multiplier)
         {
             return new Dollar(_amount * multiplier);
         }
