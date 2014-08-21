@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StockMarket
 {
-    public class Dollar
+    public class Dollar : Money
     {
         private int _amount;
 
