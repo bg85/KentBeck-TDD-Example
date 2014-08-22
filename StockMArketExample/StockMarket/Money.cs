@@ -11,11 +11,6 @@ namespace StockMarket
         protected int _amount;
         protected string _currency;
 
-        public virtual Money times(int multiplier)
-        {
-            return null;
-        }
-
         public Money(int amount, string currency)
         {
             _amount = amount;
@@ -31,6 +26,11 @@ namespace StockMarket
         {
             var money = (Money) obj;
             return _amount == money._amount && currency().Equals(money.currency());
+        }
+
+        public Money times(int multiplier)
+        {
+            return new Money(_amount * multiplier, _currency);
         }
 
         public static Money dollar(int amount)

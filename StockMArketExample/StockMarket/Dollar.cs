@@ -11,10 +11,5 @@ namespace StockMarket
         public Dollar(int amount, string currency):base(amount, currency)
         {
         }
-
-        public override Money times(int multiplier)
-        {
-            return new Money(_amount * multiplier, _currency);
-        }
     }
 }
