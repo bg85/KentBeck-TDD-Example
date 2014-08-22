@@ -8,8 +8,6 @@ namespace StockMarket
 {
     public class Franc : Money
     {
-        private string _currency;
-
         public Franc(int amount)
         {
             _amount = amount;
@@ -19,11 +17,6 @@ namespace StockMarket
         public override Money times(int multiplier)
         {
             return new Franc(_amount * multiplier);
-        }
-
-        public override string currency()
-        {
-            return _currency;
         }
     }
 }

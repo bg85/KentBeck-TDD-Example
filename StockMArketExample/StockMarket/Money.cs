@@ -9,10 +9,14 @@ namespace StockMarket
     public abstract class Money {
 
         protected int _amount;
+        protected string _currency;
 
         public abstract Money times(int multiplier);
 
-        public abstract string currency();
+        public string currency()
+        {
+            return _currency;
+        }
 
         public bool Equals(object obj)
         {

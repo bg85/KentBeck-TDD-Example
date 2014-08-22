@@ -15,8 +15,8 @@ namespace StockMArketExample
         public void testMultiplication()
         {
             var five = Money.dollar(5);
-            Assert.AreEqual(Money.dollar(10), five.times(2));
-            Assert.AreEqual(Money.dollar(15), five.times(3));
+            Assert.IsTrue(Money.dollar(10).Equals(five.times(2)));
+            Assert.IsTrue(Money.dollar(15).Equals(five.times(3)));
         }
 
         [Test]
@@ -35,8 +35,8 @@ namespace StockMArketExample
         public void testFrancMultiplication()
         {
             var five = Money.franc(5);
-            Assert.AreEqual(Money.franc(10), five.times(2));
-            Assert.AreEqual(Money.franc(15), five.times(3));
+            Assert.IsTrue(Money.franc(10).Equals(five.times(2)));
+            Assert.IsTrue(Money.franc(15).Equals(five.times(3)));
         }
 
         [Test]
