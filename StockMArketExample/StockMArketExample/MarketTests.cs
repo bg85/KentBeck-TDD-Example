@@ -133,6 +133,6 @@ namespace StockMArketExample
             Expression sum = new Sum(fiveBucks, tenFrancs).times(2);
             Money result = bank.reduce(sum, "USD");
             Assert.IsTrue(Money.dollar(20).Equals(result));
-        }
+        }
     }
 }
