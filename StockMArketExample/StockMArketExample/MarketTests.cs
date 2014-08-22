@@ -68,6 +68,12 @@ namespace StockMArketExample
             Assert.IsTrue(five.Equals(sum.addend));
         }
 
-
+        public void testReduceSum()
+        {
+            Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
+            Bank bank = new Bank();
+            Money result = bank.reduce(sum, "USD");
+            Assert.IsTrue(Money.dollar(7).Equals(result));
+        }
     }
 }

@@ -22,6 +22,10 @@ namespace StockMarket
         {
             return _currency;
         }
+        public int amount()
+        {
+            return _amount;
+        }
 
         public bool Equals(object obj)
         {
