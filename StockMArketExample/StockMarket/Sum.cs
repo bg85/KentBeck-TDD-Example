@@ -30,8 +30,10 @@ namespace StockMarket
 
         public Money reduce(Bank bank, String to)
         {
-            int amount = augend.amount() + addend.amount();
+            int amount = _augend.reduce(bank, to).amount() + _addend.reduce(bank,
+                to).amount();
             return new Money(amount, to);
-        }
+        }
+
     }
 }
