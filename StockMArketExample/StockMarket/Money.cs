@@ -30,7 +30,7 @@ namespace StockMarket
         public bool Equals(object obj)
         {
             var money = (Money) obj;
-            return _amount == money._amount && this.GetType() == obj.GetType();
+            return _amount == money._amount && currency().Equals(money.currency());
         }
 
         public static Money dollar(int amount)
