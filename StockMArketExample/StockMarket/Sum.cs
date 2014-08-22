@@ -24,6 +24,8 @@ namespace StockMarket
 
         public Sum(Money augend, Money addend)
         {
+            _augend = augend;
+            _addend = addend;
         }
     }
 }

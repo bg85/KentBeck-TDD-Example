@@ -67,5 +67,7 @@ namespace StockMArketExample
             Assert.IsTrue(five.Equals(sum.augend));
             Assert.IsTrue(five.Equals(sum.addend));
         }
+
+
     }
 }
