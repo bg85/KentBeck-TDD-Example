@@ -18,6 +18,7 @@ namespace StockMarket
 
         public int rate(String from, String to)
         {
+            if (from.Equals(to)) return 1;
             int rate = (int)rates[new Pair(from, to)];
             return rate;        }
 

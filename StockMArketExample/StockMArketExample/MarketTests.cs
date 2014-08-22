@@ -90,5 +90,10 @@ namespace StockMArketExample
             Money result = bank.reduce(Money.franc(2), "USD");
             Assert.IsTrue(Money.dollar(1).Equals(result));
         }
+
+        public void testIdentityRate()
+        {
+            Assert.AreEqual(1, new Bank().rate("USD", "USD"));
+        }
     }
 }
