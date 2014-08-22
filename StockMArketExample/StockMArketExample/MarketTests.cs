@@ -75,5 +75,12 @@ namespace StockMArketExample
             Money result = bank.reduce(sum, "USD");
             Assert.IsTrue(Money.dollar(7).Equals(result));
         }
+
+        public void testReduceMoney()
+        {
+            Bank bank = new Bank();
+            Money result = bank.reduce(Money.dollar(1), "USD");
+            Assert.IsTrue(Money.dollar(1).Equals(result));
+        }
     }
 }

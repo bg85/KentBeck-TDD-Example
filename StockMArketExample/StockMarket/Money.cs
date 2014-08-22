@@ -22,11 +22,16 @@ namespace StockMarket
         {
             return _currency;
         }
+
         public int amount()
         {
             return _amount;
         }
 
+        public Money reduce(String to)
+        {
+            return this;
+        }
         public bool Equals(object obj)
         {
             var money = (Money) obj;
