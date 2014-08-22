@@ -13,6 +13,12 @@ namespace StockMarket
 
         public abstract Money times(int multiplier);
 
+        protected Money(int amount, string currency)
+        {
+            _amount = amount;
+            _currency = currency;
+        }
+
         public string currency()
         {
             return _currency;

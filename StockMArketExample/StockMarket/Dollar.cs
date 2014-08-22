@@ -8,10 +8,8 @@ namespace StockMarket
 {
     public class Dollar : Money
     {
-        public Dollar(int amount, string currency)
+        public Dollar(int amount, string currency):base(amount, currency)
         {
-            _amount = amount;
-            _currency = currency;
         }
 
         public override Money times(int multiplier)

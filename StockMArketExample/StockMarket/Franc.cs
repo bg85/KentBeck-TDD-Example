@@ -9,9 +9,8 @@ namespace StockMarket
     public class Franc : Money
     {
         public Franc(int amount, string currency)
+            : base(amount, currency)
         {
-            _amount = amount;
-            _currency = currency;
         }
 
         public override Money times(int multiplier)
