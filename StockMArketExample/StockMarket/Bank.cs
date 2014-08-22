@@ -11,5 +11,13 @@ namespace StockMarket
         public Money reduce(Expression source, String to)
         {
             return source.reduce(this, to);
-        }    }
+        }
+
+        public int rate(String from, String to)
+        {
+            return (from.Equals("CHF") & to.Equals("USD"))
+                ? 2
+                : 1;
+        }
+    }
 }
