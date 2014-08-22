@@ -12,7 +12,9 @@ namespace StockMarket
 
         public abstract Money times(int multiplier);
 
-        public override bool Equals(object obj)
+        public abstract string currency();
+
+        public bool Equals(object obj)
         {
             var money = (Money) obj;
             return _amount == money._amount && this.GetType() == obj.GetType();

@@ -17,5 +17,10 @@ namespace StockMarket
         {
             return new Dollar(_amount * multiplier);
         }
+
+        public override string currency()
+        {
+            return "USD";
+        }
     }
 }

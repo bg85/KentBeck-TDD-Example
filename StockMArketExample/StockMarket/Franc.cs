@@ -17,5 +17,10 @@ namespace StockMarket
         {
             return new Franc(_amount * multiplier);
         }
+
+        public override string currency()
+        {
+            return "CHF";
+        }
     }
 }
