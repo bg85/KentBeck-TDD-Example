@@ -28,7 +28,7 @@ namespace StockMarket
             return _amount;
         }
 
-        public Money reduce(String to)
+        public Money reduce(Bank bank, String to)
         {
             int rate = (_currency.Equals("CHF") & to.Equals("USD"))
                 ? 2
