@@ -8,5 +8,6 @@ namespace StockMarket
 {
     public interface Expression
     {
-        Money reduce(Bank bank, String to);    }
+        Money reduce(Bank bank, String to);
+    }
 }
