@@ -8,15 +8,15 @@ namespace StockMarket
 {
     public class Dollar : Money
     {
-        public Dollar(int amount)
+        public Dollar(int amount, string currency)
         {
             _amount = amount;
-            _currency = "USD";
+            _currency = currency;
         }
 
         public override Money times(int multiplier)
         {
-            return new Dollar(_amount * multiplier);
+            return Money.dollar(_amount * multiplier);
         }
     }
 }
