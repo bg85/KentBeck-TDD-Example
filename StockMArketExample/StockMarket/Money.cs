@@ -45,12 +45,12 @@ namespace StockMarket
             return _amount + _currency.Length;
         }
 
-        public Money times(int multiplier)
+        public Expression times(int multiplier)
         {
             return new Money(_amount * multiplier, _currency);
         }
 
-        public Expression plus(Money addend)
+        public Expression plus(Expression addend)
         {
             return new Sum(this, addend);
         }

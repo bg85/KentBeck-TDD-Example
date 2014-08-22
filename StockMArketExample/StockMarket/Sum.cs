@@ -9,20 +9,20 @@ namespace StockMarket
     public class Sum : Expression
     {
         private Money _augend;
-        private Money _addend;
+        private Expression _addend;
 
         public Money augend {
             get { return _augend; }
             set { _augend = value; }
         }
 
-        public Money addend
+        public Expression addend
         {
             get { return _addend; }
             set { _addend = value; }
         }
 
-        public Sum(Money augend, Money addend)
+        public Sum(Money augend, Expression addend)
         {
             _augend = augend;
             _addend = addend;
@@ -33,6 +33,11 @@ namespace StockMarket
             int amount = _augend.reduce(bank, to).amount() + _addend.reduce(bank,
                 to).amount();
             return new Money(amount, to);
+        }
+
+        public Expression plus(Expression addend)
+        {
+            return null;
         }
 
     }
