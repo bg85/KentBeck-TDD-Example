@@ -38,5 +38,12 @@ namespace StockMArketExample
             Assert.AreEqual(Money.franc(10), five.times(2));
             Assert.AreEqual(Money.franc(15), five.times(3));
         }
+
+        [Test]
+        public void testCurrency()
+        {
+            Assert.AreEqual("USD", Money.dollar(1).currency());
+            Assert.AreEqual("CHF", Money.franc(1).currency());
+        }
     }
 }
