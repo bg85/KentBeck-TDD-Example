@@ -27,5 +27,11 @@ namespace StockMarket
             _augend = augend;
             _addend = addend;
         }
+
+        public Money reduce(String to)
+        {
+            int amount = augend.amount() + addend.amount();
+            return new Money(amount, to);
+        }
     }
 }
