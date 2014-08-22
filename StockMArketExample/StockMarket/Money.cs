@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StockMarket
 {
-    public class Money {
+    public class Money : Expression {
 
         protected int _amount;
         protected string _currency;
@@ -34,7 +34,7 @@ namespace StockMarket
             return new Money(_amount * multiplier, _currency);
         }
 
-        public Money plus(Money addend)
+        public Expression plus(Money addend)
         {
             return new Money(_amount + addend._amount, _currency);
         }

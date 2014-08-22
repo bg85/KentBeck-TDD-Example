@@ -51,8 +51,11 @@ namespace StockMArketExample
         [Test]
         public void testSimpleAddition()
         {
-            Money sum = Money.dollar(5).plus(Money.dollar(5));
-            Assert.IsTrue(Money.dollar(10).Equals(sum));
+            Money five = Money.dollar(5);
+            Expression sum = five.plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.reduce(sum, "USD");
+            Assert.IsTrue(Money.dollar(10).Equals(reduced));
         }
     }
 }

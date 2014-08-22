@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bank.cs" />
+    <Compile Include="Expression.cs" />
     <Compile Include="Franc.cs" />
     <Compile Include="Dollar.cs" />
     <Compile Include="Money.cs" />
