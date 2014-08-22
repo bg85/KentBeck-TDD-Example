@@ -47,5 +47,12 @@ namespace StockMArketExample
         {
             Assert.IsTrue(new Money(10, "CHF").Equals(new Franc(10, "CHF")));
         }
+
+        [Test]
+        public void testSimpleAddition()
+        {
+            Money sum = Money.dollar(5).plus(Money.dollar(5));
+            Assert.IsTrue(Money.dollar(10).Equals(sum));
+        }
     }
 }
