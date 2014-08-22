@@ -10,7 +10,6 @@ namespace StockMarket
     {
         public Money reduce(Expression source, String to)
         {
-            if (source.GetType() == typeof(Money)) return (Money) source;            Sum sum = (Sum)source;
-            return sum.reduce(to);
+            return source.reduce(to);
         }    }
 }

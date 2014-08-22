@@ -8,5 +8,5 @@ namespace StockMarket
 {
     public interface Expression
     {
-    }
+        Money reduce(String to);    }
 }

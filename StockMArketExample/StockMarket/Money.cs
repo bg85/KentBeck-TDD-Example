@@ -30,8 +30,12 @@ namespace StockMarket
 
         public Money reduce(String to)
         {
-            return this;
-        }
+            int rate = (_currency.Equals("CHF") & to.Equals("USD"))
+                ? 2
+                : 1;
+            return new Money(_amount/rate, to);
+        }
+
         public bool Equals(object obj)
         {
             var money = (Money) obj;
