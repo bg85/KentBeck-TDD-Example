@@ -14,7 +14,7 @@ namespace StockMarket
 
         public override Money times(int multiplier)
         {
-            return new Dollar(_amount * multiplier, _currency);
+            return new Money(_amount * multiplier, _currency);
         }
     }
 }
