@@ -36,7 +36,7 @@ namespace StockMarket
 
         public Expression plus(Money addend)
         {
-            return new Money(_amount + addend._amount, _currency);
+            return new Sum(this, addend);
         }
 
         public static Money dollar(int amount)
