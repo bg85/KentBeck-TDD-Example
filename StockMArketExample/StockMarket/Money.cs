@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace StockMarket
 {
-    public abstract class Money {
+    public class Money {
 
         protected int _amount;
         protected string _currency;
 
-        public abstract Money times(int multiplier);
+        public virtual Money times(int multiplier)
+        {
+            return null;
+        }
 
-        protected Money(int amount, string currency)
+        public Money(int amount, string currency)
         {
             _amount = amount;
             _currency = currency;
@@ -38,5 +41,10 @@ namespace StockMarket
         public static Money franc(int amount)
         {
             return new Franc(amount, "CHF");
-        }    }
+        }
+
+        public String toString()
+        {
+            return _amount + " " + _currency;
+        }    }
 }
