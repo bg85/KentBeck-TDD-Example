@@ -8,9 +8,12 @@ namespace StockMarket
 {
     public class Dollar : Money
     {
+        private string _currency;
+
         public Dollar(int amount)
         {
             _amount = amount;
+            _currency = "USD";
         }
 
         public override Money times(int multiplier)
@@ -20,7 +23,7 @@ namespace StockMarket
 
         public override string currency()
         {
-            return "USD";
+            return _currency;
         }
     }
 }
