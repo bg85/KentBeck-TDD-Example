@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,11 @@ namespace StockMarket
         public Money times(int multiplier)
         {
             return new Money(_amount * multiplier, _currency);
+        }
+
+        public Money plus(Money addend)
+        {
+            return new Money(_amount + addend._amount, _currency);
         }
 
         public static Money dollar(int amount)
