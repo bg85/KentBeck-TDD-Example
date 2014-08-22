@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace StockMarket
 {
     public class Bank
     {
+        private Hashtable rates = new Hashtable();
+        
         public Money reduce(Expression source, String to)
         {
             return source.reduce(this, to);
@@ -18,6 +21,11 @@ namespace StockMarket
             return (from.Equals("CHF") & to.Equals("USD"))
                 ? 2
                 : 1;
+        }
+
+        public void addRate(String from, String to, int rate)
+        {
+            rates.Add(new Pair(from, to), rate);
         }
     }
 }
