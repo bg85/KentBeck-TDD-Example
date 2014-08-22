@@ -8,10 +8,11 @@ namespace StockMarket
 {
     public class Sum : Expression
     {
-        private Money _augend;
+        private Expression _augend;
         private Expression _addend;
 
-        public Money augend {
+        public Expression augend
+        {
             get { return _augend; }
             set { _augend = value; }
         }
@@ -22,7 +23,7 @@ namespace StockMarket
             set { _addend = value; }
         }
 
-        public Sum(Money augend, Expression addend)
+        public Sum(Expression augend, Expression addend)
         {
             _augend = augend;
             _addend = addend;
@@ -37,8 +38,7 @@ namespace StockMarket
 
         public Expression plus(Expression addend)
         {
-            return null;
-        }
+            return new Sum(this, addend);        }
 
     }
 }
