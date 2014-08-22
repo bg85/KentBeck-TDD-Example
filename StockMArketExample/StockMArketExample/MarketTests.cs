@@ -68,6 +68,7 @@ namespace StockMArketExample
             Assert.IsTrue(five.Equals(sum.addend));
         }
 
+        [Test]
         public void testReduceSum()
         {
             Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
@@ -76,6 +77,7 @@ namespace StockMArketExample
             Assert.IsTrue(Money.dollar(7).Equals(result));
         }
 
+        [Test]
         public void testReduceMoney()
         {
             Bank bank = new Bank();
@@ -83,6 +85,7 @@ namespace StockMArketExample
             Assert.IsTrue(Money.dollar(1).Equals(result));
         }
 
+        [Test]
         public void testReduceMoneyDifferentCurrency()
         {
             Bank bank = new Bank();
@@ -91,6 +94,7 @@ namespace StockMArketExample
             Assert.IsTrue(Money.dollar(1).Equals(result));
         }
 
+        [Test]
         public void testIdentityRate()
         {
             Assert.AreEqual(1, new Bank().rate("USD", "USD"));

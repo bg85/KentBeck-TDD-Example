@@ -17,10 +17,15 @@ namespace StockMarket
             _to = to;
         }
 
-        public bool equals(object obj)
+        public override bool Equals(object obj)
         {
             Pair pair = (Pair) obj;
             return _from.Equals(pair._from) & _to.Equals(pair._to);
+        }
+
+        public override int GetHashCode()
+        {
+            return _from.Length + _to.Length;
         }
 
         public int hashCode()

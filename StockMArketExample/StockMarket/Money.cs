@@ -40,6 +40,11 @@ namespace StockMarket
             return _amount == money._amount && currency().Equals(money.currency());
         }
 
+        public override int GetHashCode()
+        {
+            return _amount + _currency.Length;
+        }
+
         public Money times(int multiplier)
         {
             return new Money(_amount * multiplier, _currency);
