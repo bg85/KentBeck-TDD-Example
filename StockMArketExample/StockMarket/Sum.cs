@@ -40,5 +40,10 @@ namespace StockMarket
         {
             return new Sum(this, addend);        }
 
+        public Expression times(int multiplier)
+        {
+            return new Sum(_augend.times(multiplier), _addend.times(multiplier));
+        }
+
     }
 }
