@@ -18,10 +18,8 @@ namespace StockMarket
 
         public int rate(String from, String to)
         {
-            return (from.Equals("CHF") & to.Equals("USD"))
-                ? 2
-                : 1;
-        }
+            int rate = (int)rates[new Pair(from, to)];
+            return rate;        }
 
         public void addRate(String from, String to, int rate)
         {
